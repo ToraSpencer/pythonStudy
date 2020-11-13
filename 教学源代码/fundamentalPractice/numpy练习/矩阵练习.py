@@ -1,0 +1,30 @@
+from numpy import *
+
+a = ones((3,3))
+b = array(((1,2,3,),(4,5,6),(7,8,9)))
+print('the type of data a is :',type(a))
+print(a*b)
+print('ndarray中\'*\'表示矩阵点乘')
+print(dot(a,b))
+print('ndarray中用\'np.dot()\'返回矩阵乘积\n')
+
+c = mat(a)
+d = mat(b)
+print('the type of data c is :',type(c))
+print(c*d)
+print('matrix中\'*\'表示矩阵乘积')
+print(multiply(c,d))
+print(multiply(a,b))
+print('ndarray和matrix中都用\'np.multiply()\'返回矩阵点乘\n')
+
+e = mat('1 0 0; 0 1 0;0 0 1')
+print('matrix can be created in matlab-style syntax')
+print(e,'\n')
+
+f = linspace(1,15,15)
+print('f=',f)
+f.resize(3,5)
+print(f)
+print(type(f))
+print('对每一列求和：',f.sum(axis=0))
+print('对每一行求和：'f.sum(axis=1))
