@@ -1,26 +1,48 @@
-# numpy, matplotlib
 # 在pycharm中使用第三方库，设置 → Python interpreter 中搜索第三方库，然后install
-import matplotlib.pyplot as plt         # matplotlib是一个第三方绘图类；pyplot是一个接口类，提供了matlab风格的一些绘图接口。
+import matplotlib.pyplot as plt             # matplotlib是一个第三方绘图类；pyplot是一个接口类，提供了matlab风格的一些绘图接口。
 plt.style.use('seaborn-whitegrid')
 import numpy as np
 from mpl_toolkits import mplot3d            # 导入mplot3d工具包，激活三维绘图功能。
 
-
-'''生成矩阵、向量的常用接口'''
-# x = np.arange(0, 10, 0.1)       # numpy.arange(start, stop, stepLen, dtype = None)，注意区间是前闭后开的。
-# x = np.linspace(0.001, 10, 1000)    # numpy::linspace(起点：终点：步数)
-# a = np.ones([3,4])                # 全1矩阵
-
-
-'''获取矩阵的元素、性质'''
-# a.shape                       # 矩阵行列数
-# print(a[0])                   # 矩阵第一行
-# print(a[0][0])                # 矩阵第一个元素
-# row = a.shape[0]              # 行数
-# col = a.shape[1]              # 列数
+''' numpy介绍'''
+"""
+    numpy(numerical python)是一个开源的科学计算库，可以取代Matlab和Mathematica的部分功能，
+    最初的NumPy其实是SciPy的一部分，后来才从SciPy中分离出来。如今，SciPy在处理数组和矩阵时会调用NumPy。
+    numpy支持C语言API
+    
+"""
 
 
-'''基本矩阵变换、运算'''
+
+
+
+''' numpy数组'''
+"""
+    numpy数组在数值计算方面的效率优于python自己的list容器，但是通用性则差于list
+    
+"""
+
+
+''' 生成矩阵、向量的常用接口'''
+"""
+    x = np.arange(0, 10, 0.1)           # numpy.arange(start, stop, stepLen, dtype = None)，注意区间是前闭后开的。
+    x = np.linspace(0.001, 10, 1000)    # numpy::linspace(起点：终点：步数)
+    a = np.ones([3,4])                  # 全1矩阵
+"""
+
+
+''' 获取矩阵的元素、性质'''
+"""
+    a.shape                       # 矩阵行列数
+    print(a[0])                   # 矩阵第一行
+    print(a[0][0])                # 矩阵第一个元素
+    row = a.shape[0]              # 行数
+    col = a.shape[1]              # 列数
+    
+"""
+
+
+''' 基本矩阵变换、运算'''
 # a = [1,1,1]
 # b = [2,2,2]
 # print(np.prod(b))          # 矩阵、向量的元素连乘乘积
@@ -34,6 +56,7 @@ from mpl_toolkits import mplot3d            # 导入mplot3d工具包，激活三
 # print(a)
 # print(np.transpose(a))        # transpose()函数对只有一行的矩阵没用，只能用reshape()实现
 # print(a.reshape([3,1]))
+
 
 '''     矩阵拼接'''
 # m = np.vstack([a, b])       # 纵向拼接
@@ -55,7 +78,7 @@ from mpl_toolkits import mplot3d            # 导入mplot3d工具包，激活三
 # print(np.kron(a,b))            # 克罗内克积np.kron()
 
 
-'''高级矩阵变换、运算'''
+'''     高级矩阵变换、运算'''
 # a = [1,2,3]
 # b = [4, 5, 6]
 # c = np.vstack([a,b])
@@ -77,8 +100,6 @@ from mpl_toolkits import mplot3d            # 导入mplot3d工具包，激活三
 
 # print(np.linalg.norm(a,1))        # 矩阵的一范数，即所有元素绝对值加和
 # print(np.linalg.norm(a,2))        # 矩阵的二范数，如果矩阵是向量的话，就是其模长。
-
-
 
 
 '''         求解线性方程组'''
@@ -154,3 +175,7 @@ from mpl_toolkits import mplot3d            # 导入mplot3d工具包，激活三
     
 
 """
+
+
+
+

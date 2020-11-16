@@ -1,4 +1,11 @@
 
+''' pycharm快捷键'''
+"""
+    折叠所有代码      shift + ctrl + -
+    展开所有代码      shift +ctrl + +
+    注释/反注释选定行        ctrl + /
+"""
+
 
 # 注释
 
@@ -12,7 +19,6 @@
 print(type(3.14))       # type()——获取变量类型
 
 
-
 ''' 导入模块、函数'''
 """
     import timeit           # 导入整个模块
@@ -22,7 +28,6 @@ print(type(3.14))       # type()——获取变量类型
     from math import *      # 想要导入整个模块又懒得用别名就这样。
     print(pi)
 """
-
 
 
 ''' 基本语句'''
@@ -234,6 +239,55 @@ print(type(3.14))       # type()——获取变量类型
 
 """
 
+
+''' 调用自己写的轮子来读取.dat文件中的数组'''
+""" 
+import struct
+with open("x.dat", 'wb') as file:
+    for elem in x1:
+        temp = struct.pack('d', elem)
+        file.write(temp)
+    file.close()
+
+with open("y.dat", 'wb') as file:
+    for elem in y1:
+        temp = struct.pack('d', elem)
+        file.write(temp)
+    file.close()
+
+
+xx = []
+yy = []
+with open('x.dat', 'rb') as file:
+    size = os.path.getsize('x.dat')
+    size = int(size/8)
+    for i in range(size):
+        temp = file.read(8)
+        temp = struct.unpack('d', temp)
+        xx.append(temp[0])
+    file.close()
+
+
+with open('y.dat', 'rb') as file:
+    size = os.path.getsize('y.dat')
+    size = int(size/8)
+    for i in range(size):
+        temp = file.read(8)
+        temp = struct.unpack('d', temp)
+        yy.append(temp[0])
+    file.close()
+
+
+fig = plt.figure()
+ax = plt.axis()
+plt.plot(xx, yy, '*b')
+
+
+
+from selfDefined import readDoubleArray
+xx = readDoubleArray('x.dat')
+print(xx)
+"""
 
 
 

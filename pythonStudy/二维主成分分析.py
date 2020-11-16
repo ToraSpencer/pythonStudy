@@ -12,7 +12,6 @@ from mpl_toolkits import mplot3d            # 导入mplot3d工具包，激活三
 
 # 以直线l1: y = x+1为PCA1, 直线l2: y = -x+5为PCA2做一组xoy平面上的数据点，均值点应该为(2,3)
 
-
 #   1. 先在a = 100,b = 30的椭圆区域上生成1000个随机的数据点。
 np.random.seed(1234)        #设置随机种子为1234
 theta = 2*3.14159*np.random.rand(1, 1000)
