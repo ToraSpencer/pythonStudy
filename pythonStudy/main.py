@@ -44,6 +44,11 @@ import sys
 print(sys.getsizeof(points))
 
 
+from selfDefined import foo
+foo()
+
+from dataType_basicData import *
+test0()
 
 
 

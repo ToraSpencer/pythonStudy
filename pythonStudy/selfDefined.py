@@ -98,3 +98,8 @@ def readOBJ(filePath):
                 break
         return points
 
+
+
+def foo():
+    print("hahahah")
+    return
