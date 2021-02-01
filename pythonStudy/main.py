@@ -1,6 +1,6 @@
 # python中的宏函数
 def print_hi(name):
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    print(f'Hi, {name}')             # Press Ctrl+F8 to toggle the breakpoint.
 
 
 if __name__ == '__main__':
@@ -47,8 +47,7 @@ print(sys.getsizeof(points))
 from selfDefined import foo
 foo()
 
-from dataType_basicData import *
-test0()
+
 
 
 
