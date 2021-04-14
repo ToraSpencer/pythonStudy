@@ -37,14 +37,12 @@ print(type(3.14))       # type()——获取变量类型
     for i in range(10):
         arr.append(i)
     
-    
     with open("data.dat", 'wb') as f:           # wb模式表示二进制写模式
         for elem in arr:
             s = struct.pack('d', elem)          
             f.write(s)
         f.close()
-    
-    
+        
     num = []
     with open("data.dat", 'rb') as f:           # rb模式表示二进制读模式
         size = os.path.getsize('data.dat')      # os.path.getsize()方法获取文件大小
@@ -55,7 +53,6 @@ print(type(3.14))       # type()——获取变量类型
             num.append(arg[0])                  # unpack出来的数据是一个元祖。
         f.close()
     print(num)
-
 """
 
 
@@ -100,8 +97,6 @@ with open('y.dat', 'rb') as file:
 fig = plt.figure()
 ax = plt.axis()
 plt.plot(xx, yy, '*b')
-
-
 
 from selfDefined import readDoubleArray
 xx = readDoubleArray('x.dat')

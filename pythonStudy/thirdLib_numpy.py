@@ -23,23 +23,27 @@ from mpl_toolkits import mplot3d            # 导入mplot3d工具包，激活三
 """
 
 
-''' 生成矩阵、向量的常用接口'''
-"""
-    x = np.arange(0, 10, 0.1)           # numpy.arange(start, stop, stepLen, dtype = None)，注意区间是前闭后开的。
-    x = np.linspace(0.001, 10, 1000)    # numpy::linspace(起点：终点：步数)
-    a = np.ones([3,4])                  # 全1矩阵
-"""
+# '''生成矩阵、向量的常用接口'''
+# x = np.arange(0, 10, 0.1)           # numpy.arange(start, stop, stepLen, dtype = None)，注意区间是前闭后开的。
+# x = np.linspace(0.001, 10, 1000)    # numpy::linspace(起点：终点：步数)
+# a = np.ones([3,4])                  # 全1矩阵
+# '''     np.asarray()——输入tuple, list对象，输出矩阵'''
+# list1 = [1, 2, 3]
+# tuple1 = ((1, 2, 3), (4, 5, 6), (7, 8, 9))
+# list2 = [(-1, -2, -3), (-4, -5, -6)]
+# array1 = np.asarray(list1)
+# array2 = np.asarray(tuple1)
+# array3 = np.asarray(list2)
 
 
-''' 获取矩阵的元素、性质'''
-"""
-    a.shape                       # 矩阵行列数
-    print(a[0])                   # 矩阵第一行
-    print(a[0][0])                # 矩阵第一个元素
-    row = a.shape[0]              # 行数
-    col = a.shape[1]              # 列数
-    
-"""
+
+# ''' 获取矩阵的元素、性质'''
+# a.shape                       # 矩阵行列数
+# print(a[0])                   # 矩阵第一行
+# print(a[0][0])                # 矩阵第一个元素
+# row = a.shape[0]              # 行数
+# col = a.shape[1]              # 列数
+
 
 
 ''' 基本矩阵变换、运算'''
@@ -64,12 +68,12 @@ from mpl_toolkits import mplot3d            # 导入mplot3d工具包，激活三
 
 
 '''     矩阵拆分'''
-# a = np.array([[1,2,3],[4,5,6], [7,8,9], [10,11,12]])
-# print(a)
-# [a1,a2] = np.vsplit(a, 2)       # 纵切
-# [b1,b2,b3] = np.hsplit(a, 3)    # 横切
-# print(a1)
-# print(b1)
+a = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]])
+print('\na ==\n', a)
+[a1, a2] = np.vsplit(a, 2)       # 纵切
+[b1, b2, b3] = np.hsplit(a, 3)    # 横切
+print('\na1 ==\n', a1)
+print('\nb1 ==\n', b1)
 
 
 '''     矩阵运算'''
@@ -82,6 +86,8 @@ from mpl_toolkits import mplot3d            # 导入mplot3d工具包，激活三
 # a = [1,2,3]
 # b = [4, 5, 6]
 # c = np.vstack([a,b])
+
+
 
 '''         矩阵复制扩张np.tile()'''
 # d = np.tile(c,[3,2])

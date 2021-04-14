@@ -7,7 +7,7 @@ from mpl_toolkits import mplot3d  # 导入mplot3d工具包，激活三维绘图�
 # 读取OBJ文件数据
 import os
 
-objFilePath = 'E:\\testdata\\jawMeshUpper.obj'
+objFilePath = 'E:\\材料\\tooth.obj'
 with open(objFilePath) as file:
     points = []
     while 1:

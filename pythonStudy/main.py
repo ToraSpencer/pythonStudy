@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt  # matplotlib是一个第三方绘图类；pyplo
 plt.style.use('seaborn-whitegrid')
 import numpy as np
 from mpl_toolkits import mplot3d  # 导入mplot3d工具包，激活三维绘图功能。
-from selfDefined import Quaternion
+
 
 
 '''读取OBJ文件数据'''
@@ -36,17 +36,16 @@ import os
 #             break
 
 
-from selfDefined import readOBJ
-path = 'E:\\jawOut.obj'
-points = readOBJ(path)
-print(points)
-import sys
-print(sys.getsizeof(points))
-
-
-from selfDefined import foo
-foo()
-
+# from selfDefined import readOBJ
+# path = 'E:\\jawOut.obj'
+# points = readOBJ(path)
+# print(points)
+# import sys
+# print(sys.getsizeof(points))
+#
+#
+# from selfDefined import foo
+# foo()
 
 
 

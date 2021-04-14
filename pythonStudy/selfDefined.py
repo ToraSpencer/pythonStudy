@@ -22,8 +22,8 @@ def readDoubleArray(str):
     return x
 
 
-''' 函数————读取纯点集OBJ文件'''
-def readOBJ(filePath):
+''' 函数————读取OBJ文件中的顶点信息'''
+def objReadVertices(filePath):
     file: TextIO
     with open(filePath) as file:
         points = []
