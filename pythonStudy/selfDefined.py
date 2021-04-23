@@ -34,9 +34,35 @@ def objReadVertices(filePath):
             strs = line.split(" ")
             if strs[0] == "v":
                 points.append((float(strs[1]), float(strs[2]), float(strs[3])))
-            if strs[0] == "vt":
-                break
+            else:
+                continue
         return points
+
+
+def objReadTriangles(filePath):
+    file: TextIO
+    with open(filePath) as file:
+        tris = []
+        while 1:
+            line = file.readline()
+            if not line:
+                break
+            strs = line.split(" ")
+            if strs[0] == "f":
+                tris.append((int(strs[1]), int(strs[2]), int(strs[3])))
+            else:
+                continue
+    return tris
+
+
+''' 将点云画出来'''
+def printVers(vers):
+    vers_array = np.asarray(vers)
+    [x, y, z] = np.hsplit(vers_array, 3)
+    fig = plt.figure()
+    ax3 = plt.axes(projection='3d')          # 关键字参数projection='3d'指定创建维度为三维。
+    ax3.scatter3D(x, y, z, cmap='Blues')     # scatter3D()——画三维散点图。
+    plt.show()
 
 
 
